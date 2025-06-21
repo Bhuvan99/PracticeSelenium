@@ -1,5 +1,6 @@
 package SelectorsPractice;
 
+import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
@@ -19,7 +20,9 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class selectorsSelenium {
+import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
+
+public class locatorsClass {
 	
 	public static void main(String args[]) throws MalformedURLException {
 		
@@ -155,18 +158,28 @@ public class selectorsSelenium {
 			}
 		}
 		
-		driver.findElement(By.xpath("//input[@placeholder=\"Select an item\"]")).click();
-		WebElement scrollArea = driver.findElement(By.xpath("//div[@id=\"dropdown\"]"));
 		
-		String targetOption = "Item 100";
+		List<WebElement> errorLinks = driver.findElements(By.xpath("//div[@id=\"broken-links\"]//a[@class=\"link\"]"));
+//		List<WebElement> errorLinks = new ArrayList<WebElement>(errorLinksLocators);
+		int brkLinks=0;
+		for(WebElement errLinks:errorLinks) {
+			String getErrorLinks = errLinks.getAttribute("href");
+			try {
+			HttpURLConnection linkUrl = (HttpURLConnection) new URL(getErrorLinks).openConnection();
+			linkUrl.connect();
+			if(linkUrl.getResponseCode()>=400) {
+				System.out.println("Broken Link");
+				brkLinks++;
+			}
+			else {
+				System.out.println("No Broken Link");
+			}
 		
-		WebElement targetValue = driver.findElement(By.xpath("//div[normalize-space()='Item 100']"));
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].scrollIntoView();", targetValue);
-		
-		
-		
-		
+			
+		}catch(Exception e)	{}
+			
+		}
+		System.out.println("No. of Broken links provided: "+brkLinks);
 		driver.quit();
 	}
 }
