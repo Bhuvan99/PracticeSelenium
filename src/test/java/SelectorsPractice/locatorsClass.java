@@ -1,5 +1,6 @@
 package SelectorsPractice;
 
+import java.io.File;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -13,6 +14,8 @@ import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -180,6 +183,12 @@ public class locatorsClass {
 			
 		}
 		System.out.println("No. of Broken links provided: "+brkLinks);
+		
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		File sourceFile = ts.getScreenshotAs(OutputType.FILE);
+		File targetFile = new File(System.getProperty("user.dir")+"\\ScreenShots\\fullPage.png");
+		sourceFile.renameTo(targetFile);
+		
 		driver.quit();
 	}
 }
