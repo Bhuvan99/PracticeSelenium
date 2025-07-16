@@ -1,6 +1,7 @@
 package SelectorsPractice;
 
 import java.io.File;
+
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -188,6 +189,8 @@ public class locatorsClass {
 		File sourceFile = ts.getScreenshotAs(OutputType.FILE);
 		File targetFile = new File(System.getProperty("user.dir")+"\\ScreenShots\\fullPage.png");
 		sourceFile.renameTo(targetFile);
+		
+		
 		
 		driver.quit();
 	}
