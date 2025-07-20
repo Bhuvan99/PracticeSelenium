@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+  <parameter name="url" value = "https://parabank.parasoft.com/parabank/index.htm"/>
+  
+  <listeners>
+  	<listener class-name="Listeners.ListenerClass"/>
+  </listeners>
+  
+    <classes>
+      <class name="Listeners.testMethods"/>
+      <class name="Listeners.testMethods2"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

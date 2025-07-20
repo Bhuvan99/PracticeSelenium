@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="tests" >
+  <test thread-count="5" name="chromeTest">
+    <classes>
+      <class name="ParallelTesting.testMethods"/>
+      <parameter name="browser" value="chrome"/>
+    </classes>
+  </test> <!-- parallelTesting -->
+  
+  <test thread-count="5" name="EdgeTest">
+  <parameter name="browser" value="edge"/>
+  <classes>
+  	<class name="ParallelTesting.testMethods"/>  
+  </classes>
+  </test>
+  
+  <test thread-count="5" name="fireFoxTest">
+  <parameter name="browser" value="fireFox"/>
+  <classes>
+  	<class name="ParallelTesting.testMethods"/>
+  </classes>
+  </test>
+  
+</suite> <!-- Suite -->

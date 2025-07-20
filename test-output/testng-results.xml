@@ -1,69 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-10T00:57:42 IST" name="Suite" finished-at="2025-07-10T00:57:42 IST" duration-ms="173">
+  <suite started-at="2025-07-19T23:27:58 IST" name="Suite" finished-at="2025-07-19T23:28:17 IST" duration-ms="18421">
     <groups>
     </groups>
-    <test started-at="2025-07-10T00:57:42 IST" name="Test" finished-at="2025-07-10T00:57:42 IST" duration-ms="65">
-      <class name="multiClassSuites.classForTest1">
-        <test-method is-config="true" signature="beforeTestMethod()[pri:0, instance:multiClassSuites.classForTest1@3857f613]" started-at="2025-07-10T00:57:42 IST" name="beforeTestMethod" finished-at="2025-07-10T00:57:42 IST" duration-ms="10" status="PASS">
+    <test started-at="2025-07-19T23:27:58 IST" name="Test" finished-at="2025-07-19T23:28:17 IST" duration-ms="18421">
+      <class name="Listeners.testMethods2">
+        <test-method is-config="true" signature="login(java.lang.String)[pri:0, instance:Listeners.testMethods2@45c7e403]" started-at="2025-07-19T23:28:08 IST" name="login" finished-at="2025-07-19T23:28:16 IST" duration-ms="7630" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://parabank.parasoft.com/parabank/index.htm]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeTestMethod -->
-        <test-method signature="testMehod2()[pri:0, instance:multiClassSuites.classForTest1@3857f613]" started-at="2025-07-10T00:57:42 IST" name="testMehod2" finished-at="2025-07-10T00:57:42 IST" duration-ms="6" status="PASS">
+        </test-method> <!-- login -->
+        <test-method signature="anotherTest()[pri:0, instance:Listeners.testMethods2@45c7e403]" started-at="2025-07-19T23:28:16 IST" name="anotherTest" finished-at="2025-07-19T23:28:16 IST" duration-ms="64" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMehod2 -->
-        <test-method signature="testMethod1()[pri:0, instance:multiClassSuites.classForTest1@3857f613]" started-at="2025-07-10T00:57:42 IST" name="testMethod1" finished-at="2025-07-10T00:57:42 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- anotherTest -->
+        <test-method signature="anotherTest2()[pri:0, instance:Listeners.testMethods2@45c7e403]" started-at="2025-07-19T23:28:16 IST" name="anotherTest2" finished-at="2025-07-19T23:28:16 IST" depends-on-methods="Listeners.testMethods2.anotherTest" duration-ms="51" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMethod1 -->
-      </class> <!-- multiClassSuites.classForTest1 -->
-      <class name="multiClassSuites.classForTest2">
-        <test-method signature="testMethod1()[pri:0, instance:multiClassSuites.classForTest2@4d1c00d0]" started-at="2025-07-10T00:57:42 IST" name="testMethod1" finished-at="2025-07-10T00:57:42 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- anotherTest2 -->
+        <test-method is-config="true" signature="driverClose()[pri:0, instance:Listeners.testMethods2@45c7e403]" started-at="2025-07-19T23:28:16 IST" name="driverClose" finished-at="2025-07-19T23:28:17 IST" duration-ms="426" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMethod1 -->
-        <test-method signature="testMethod2()[pri:0, instance:multiClassSuites.classForTest2@4d1c00d0]" started-at="2025-07-10T00:57:42 IST" name="testMethod2" finished-at="2025-07-10T00:57:42 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- driverClose -->
+      </class> <!-- Listeners.testMethods2 -->
+      <class name="Listeners.testMethods">
+        <test-method is-config="true" signature="login(java.lang.String)[pri:0, instance:Listeners.testMethods@24aed80c]" started-at="2025-07-19T23:27:58 IST" name="login" finished-at="2025-07-19T23:28:08 IST" duration-ms="9559" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://parabank.parasoft.com/parabank/index.htm]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMethod2 -->
-        <test-method is-config="true" signature="afterTestMethod()[pri:0, instance:multiClassSuites.classForTest2@4d1c00d0]" started-at="2025-07-10T00:57:42 IST" name="afterTestMethod" finished-at="2025-07-10T00:57:42 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- login -->
+        <test-method signature="test()[pri:1, instance:Listeners.testMethods@24aed80c]" started-at="2025-07-19T23:28:08 IST" name="test" finished-at="2025-07-19T23:28:08 IST" duration-ms="90" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterTestMethod -->
-      </class> <!-- multiClassSuites.classForTest2 -->
+        </test-method> <!-- test -->
+        <test-method signature="test2()[pri:0, instance:Listeners.testMethods@24aed80c]" started-at="2025-07-19T23:28:08 IST" name="test2" finished-at="2025-07-19T23:28:08 IST" depends-on-methods="Listeners.testMethods.test" duration-ms="49" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method is-config="true" signature="driverClose()[pri:0, instance:Listeners.testMethods@24aed80c]" started-at="2025-07-19T23:28:08 IST" name="driverClose" finished-at="2025-07-19T23:28:08 IST" duration-ms="448" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverClose -->
+      </class> <!-- Listeners.testMethods -->
     </test> <!-- Test -->
-    <test started-at="2025-07-10T00:57:42 IST" name="Test2" finished-at="2025-07-10T00:57:42 IST" duration-ms="19">
-      <class name="multiClassSuites.classForTest1">
-        <test-method is-config="true" signature="beforeTestMethod()[pri:0, instance:multiClassSuites.classForTest1@4e50c791]" started-at="2025-07-10T00:57:42 IST" name="beforeTestMethod" finished-at="2025-07-10T00:57:42 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTestMethod -->
-        <test-method signature="testMehod2()[pri:0, instance:multiClassSuites.classForTest1@4e50c791]" started-at="2025-07-10T00:57:42 IST" name="testMehod2" finished-at="2025-07-10T00:57:42 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testMehod2 -->
-        <test-method signature="testMethod1()[pri:0, instance:multiClassSuites.classForTest1@4e50c791]" started-at="2025-07-10T00:57:42 IST" name="testMethod1" finished-at="2025-07-10T00:57:42 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testMethod1 -->
-      </class> <!-- multiClassSuites.classForTest1 -->
-      <class name="multiClassSuites.classForTest2">
-        <test-method signature="testMethod1()[pri:0, instance:multiClassSuites.classForTest2@7530ad9c]" started-at="2025-07-10T00:57:42 IST" name="testMethod1" finished-at="2025-07-10T00:57:42 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testMethod1 -->
-        <test-method signature="testMethod2()[pri:0, instance:multiClassSuites.classForTest2@7530ad9c]" started-at="2025-07-10T00:57:42 IST" name="testMethod2" finished-at="2025-07-10T00:57:42 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testMethod2 -->
-        <test-method is-config="true" signature="afterTestMethod()[pri:0, instance:multiClassSuites.classForTest2@7530ad9c]" started-at="2025-07-10T00:57:42 IST" name="afterTestMethod" finished-at="2025-07-10T00:57:42 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTestMethod -->
-      </class> <!-- multiClassSuites.classForTest2 -->
-    </test> <!-- Test2 -->
   </suite> <!-- Suite -->
 </testng-results>

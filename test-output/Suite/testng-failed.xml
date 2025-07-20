@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="Listeners.ListenerClass"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <parameter name="url" value="https://parabank.parasoft.com/parabank/index.htm"/>
+    <classes>
+      <class name="Listeners.testMethods2">
+        <methods>
+          <include name="anotherTest"/>
+          <include name="anotherTest2"/>
+          <include name="login"/>
+          <include name="driverClose"/>
+        </methods>
+      </class> <!-- Listeners.testMethods2 -->
+      <class name="Listeners.testMethods">
+        <methods>
+          <include name="test2"/>
+          <include name="login"/>
+          <include name="driverClose"/>
+          <include name="test"/>
+        </methods>
+      </class> <!-- Listeners.testMethods -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
