@@ -1,0 +1,5 @@
+This is for Pull check command.
+This is from the Github repository.
+
+git push origin <branch_name>
+git pull origin <branch_name>
